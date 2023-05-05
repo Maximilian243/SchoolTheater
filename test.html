@@ -1,157 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-  <style>body {
-  width: 100%;
-  height: 90vh;
-  position: relative;
-}
+<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+<label for="fileElem">Select some files</label>
 
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
+<script>var fileSelect = document.getElementById("fileSelect"),
+  fileElem = document.getElementById("fileElem");
 
-.text {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: flex-end;
-}</style>
-</head>
-<body>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
-F</br>
+fileSelect.addEventListener("click", function (e) {
+  if (fileElem) {
+    fileElem.click();
+  }
+  e.preventDefault();
+}, false);
+</script>
+<script>
+  function send_file_custom(data) {
+    return data;
+  }
 
-
- <footer>
-    <div class="text">
-      <small class="text-transp">
-          texttest -
-          <a href="#">link</a>
-          - texttest
-      </small>
-    </div>
-  </footer>
-</body>
-</html>
+  const fileSelector = document.getElementById('fileElem');
+  fileSelector.addEventListener('change', (event) => {
+    const fileList = event.target.files;
+    send_file_custom(fileList);
+  });
+</script>
